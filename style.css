@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
+
+    background:radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        #305381 0%,
+        #131537 100%
+    );
+}
+
+.wrapper{
+
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scoreboard{
+    width: 60%;
+    height: 22%;
+    margin-top: 30px;
+    padding: 10px;
+    border:2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.score{
+    width: 30%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+    border: 2px solid white;
+    background-color: white;
+    margin: 0px 10px;
+}
+
+.score h1{
+    color: #565448;
+
+}
+.score p{
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: 600;
+}
+
+.hands{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top : 60px;
+
+    background-image: url(assets/triangle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hands .hand{
+    margin:0px 20px;
+    cursor: pointer;
+    transition: all 0.2s ;
+
+}
+
+.hands .hand:hover{
+    transform: translate3d(0px -8px 0px);
+
+}
+
+.contest{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    display: none;
+}
+
+.contest > div{
+
+    width: 250px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.userhand, .computerhand{
+    font-size : 15px;
+    text-transform: uppercase;
+    color: rgb(216, 216, 216);
+    letter-spacing: 2px;
+}
+
+.contest img{
+    width: 200px;
+    height: 200px;
+}
+
+.decision{
+    font-size : 30px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+}
+.newGame{
+    padding: 15px 30px;
+    border:2px solid white;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.newGame:hover{
+    background-color: black;
+    transform: translate3d(0px -80px 0px);
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+
+@media (max-width: 800px){
+
+    .wrapper{
+        justify-content: space-evenly;
+    }
+    
+    .scoreboard{
+        width: 95%;
+
+    }
+
+    .hands{
+        width: 100%;
+        height: 230px;
+        
+        background-size: contain;
+        position: relative;
+        background-position: center;
+    }
+
+    .hands .hand img{
+        width: 100px;
+    }
+
+    .rock img {
+        margin-top: 15px;
+    }
+    .paper img{
+        margin-right: 23px;
+
+    }
+    .scissors img{
+        margin-left: 23px;
+    }
+
+    .contest{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        display: none;
+    }
+
+    #userPickedImage, #computerPickedImage{
+        width: 80px;
+        height: 80px;
+    }
+
+    .contest h1{
+        font-size: 15px;
+        margin: 20px;
+    }
+
+    .newGame{
+        padding: 5px 10px;
+        border:2px solid white;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        letter-spacing: 0px;
+        border-radius: 10px;
+        transition: all 0.2s;
+        margin-top: -200px;
+    }
+}
